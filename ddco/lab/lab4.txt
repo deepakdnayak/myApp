@@ -1,0 +1,29 @@
+4> Design Verilog HDL to implement Binary Adder-Subtractor – Half and Full Adder, Half and Full
+Subtractor
+
+
+module Half_Adder_V(input A, input B, output sum, output carry);
+	assign sum = A ^ B;
+	assign carry = A & B;
+endmodule 
+
+
+
+module Full_Adder_V(input a,b,cin, output S,Cout);
+	assign S = a ^ b ^ cin;
+	assign Cout = (a & b) | (b & cin) | (a & cin);
+endmodule 
+
+
+
+module Half_Subtractor_V(input A,B, output Diff,Borrow);
+	assign Diff = A ^ B;
+	assign Borrow = ~A & B;
+endmodule 
+
+
+
+module Full_Subtractor_V(input A,B,Bin ,output Diff,Bout);
+	assign Diff = A ^ B ^ Bin;
+	assign Bout = (~A & B) | (~(A ^ B) & Bin);
+endmodule 
