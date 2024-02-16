@@ -1,0 +1,2 @@
+Given a 4-variable logic expression, simplify it using appropriate technique and simulate the same
+using basic gates.
